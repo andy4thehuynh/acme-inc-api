@@ -1,0 +1,39 @@
+_id: req_2275025e70544f49830c896b8fcc1211
+type: Request
+parentId: fld_e814d216058f44079dc1c847da89d456
+modified: 1740515953981
+created: 1740515953981
+url: https://{{_['host']}}/v2/bank-accounts
+name: ListBankAccounts
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: limit
+    value: ""
+    disabled: true
+  - name: location_id
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952582
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

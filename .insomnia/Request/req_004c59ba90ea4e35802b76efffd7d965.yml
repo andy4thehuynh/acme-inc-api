@@ -1,0 +1,43 @@
+_id: req_004c59ba90ea4e35802b76efffd7d965
+type: Request
+parentId: fld_584ca854673b476a91d0ae6784270808
+modified: 1740515954012
+created: 1740515954012
+url: https://{{_['host']}}/v2/customers/bulk-delete
+name: BulkDeleteCustomers
+description: Creates a new customer for the business, which can have associated
+  cards on file.
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "customer_ids": [
+            "BQEQMDMQBC8QS8PMKTX0MDD4C8",
+            "SM1FDYF4PX3AN26X57JVJFQX68"
+        ]
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952461
+isPrivate: false
+pathParameters: null
+afterResponseScript: |-
+  var jsonData = JSON.parse(responseBody);
+  postman.setEnvironmentVariable("customer_id", jsonData.customer.id);
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

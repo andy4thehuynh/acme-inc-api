@@ -1,0 +1,47 @@
+_id: req_4d7503021bde4838ac56edef003a9464
+type: Request
+parentId: fld_5c1c46671cd34894825db93675e6b85c
+modified: 1740515953963
+created: 1740515953963
+url: https://{{host}}/v2/terminals/actions
+name: CreateTerminalAction-Confirmation screen
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: >-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "action": {
+          "device_id": "{{device_id}}",
+          "type": "CONFIRMATION",
+          "confirmation_options": {
+            "title": "Marketing communications",
+            "body": "I agree to receive promotional emails about future events and activities.",
+            "agree_button_text": "Agree",
+            "disagree_button_text": "Decline"
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952660
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

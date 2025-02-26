@@ -1,0 +1,52 @@
+_id: req_684d6175910c4c488afe28508cca3d2b
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953998
+created: 1740515953998
+url: https://{{host}}/v2/catalog/list
+name: ListCatalog
+description: >-
+  Returns a list of [CatalogObject](#type-catalogobject)s that includes
+
+  all objects of a set of desired types (for example, all [CatalogItem](#type-catalogitem)
+
+  and [CatalogTax](#type-catalogtax) objects) in the catalog. The types parameter
+
+  is specified as a comma-separated list of valid [CatalogObject](#type-catalogobject) types:
+
+  `ITEM`, `ITEM_VARIATION`, `MODIFIER`, `MODIFIER_LIST`, `CATEGORY`, `DISCOUNT`, `TAX`.
+method: GET
+body: {}
+parameters:
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: types
+    value: ""
+    disabled: true
+  - name: catalog_version
+    value: ""
+    disabled: true
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952527
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

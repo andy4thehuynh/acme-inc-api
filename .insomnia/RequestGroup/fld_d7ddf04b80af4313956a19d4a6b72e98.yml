@@ -1,0 +1,14 @@
+_id: fld_d7ddf04b80af4313956a19d4a6b72e98
+type: RequestGroup
+parentId: fld_d28d381da39444e58f67f3c081e4dcc7
+modified: 1740515954022
+created: 1740515954022
+name: Gift Cards
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952414
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

@@ -1,0 +1,14 @@
+_id: fld_5c1c46671cd34894825db93675e6b85c
+type: RequestGroup
+parentId: fld_da6207513c5d4a48a681a9b7dda8d5b4
+modified: 1740515953963
+created: 1740515953963
+name: Custom screen workflows
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952661
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

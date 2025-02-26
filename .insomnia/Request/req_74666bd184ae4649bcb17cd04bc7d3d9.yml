@@ -1,0 +1,30 @@
+_id: req_74666bd184ae4649bcb17cd04bc7d3d9
+type: Request
+parentId: fld_d60f7039feed4f9a8e136e3332c9adf9
+modified: 1740515953983
+created: 1740515953983
+url: https://{{host}}/v2/payouts/{{payout_id}}
+name: GetPayout
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952577
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

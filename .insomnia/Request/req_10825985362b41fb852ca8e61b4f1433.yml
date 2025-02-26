@@ -1,0 +1,73 @@
+_id: req_10825985362b41fb852ca8e61b4f1433
+type: Request
+parentId: fld_45685a2b53e849c186ae3e3035b9bc33
+modified: 1740515953974
+created: 1740515953974
+url: https://{{host}}/v2/invoices/{{invoice_id}}
+name: UpdateInvoice
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "invoice": {
+          "description": "Service that has been completed. ",
+          "invoice_number": "000003",
+          "location_id": "6VJ7QXVFCPZCM",
+          "order_id": "T7ZA0SZokfVTKuFAC8AlqkueV",
+          "version": 2,
+          "payment_requests": [
+            {
+              "card_id": "ccof:WdL7gpjeCsKn0UP63GB",
+              "due_date": "2020-09-28",
+              "fixed_amount_requested_money": {
+                "amount": 60000,
+                "currency": "USD"
+              },
+              "reminders": [
+                {
+                  "message": "Your Invoice due date is approaching. ",
+                  "relative_scheduled_days": 2
+                }
+              ],
+              "request_method": "CHARGE_CARD_ON_FILE",
+              "request_type": "BALANCE",
+              "tipping_enabled": true
+            }
+          ],
+          "primary_recipient": {
+            "customer_id": "YFZNEDCYECS356834D8H7WCSRW"
+          },
+          "title": "Multiphase Gym Membership Monthly Invoice"
+        },
+        "idempotency_key": "5ac8a1f3-e302-4749-8387-2845ff4ee2fe",
+        "fields_to_clear": [
+          null
+        ]
+      }
+parameters:
+  - name: ""
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952613
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

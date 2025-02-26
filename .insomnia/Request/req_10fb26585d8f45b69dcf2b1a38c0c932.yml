@@ -1,0 +1,39 @@
+_id: req_10fb26585d8f45b69dcf2b1a38c0c932
+type: Request
+parentId: fld_5875a580b0ce44eca795eba2512baffa
+modified: 1740515953970
+created: 1740515953970
+url: https://{{host}}/v2/disputes
+name: ListDisputes
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: states
+    value: ""
+    disabled: true
+  - name: location_id
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952629
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,58 @@
+_id: req_f9abf2f8fa6d4efbb37f00441c31c943
+type: Request
+parentId: fld_5b8d7084a7ad47108e0d10feb07dbe6a
+modified: 1740515954028
+created: 1740515954028
+url: https://{{host}}/v2/labor/shifts/{{shift_id}}
+name: UpdateShift
+description: ""
+method: PUT
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "shift": {
+          "team_member_id": "{{_['team_member_id']}}",
+          "location_id": "{{_['location_id']}}",
+          "timezone": "America/Los_Angeles",
+          "start_at": "2023-12-12T04:00:00-08:00",
+          "end_at": "2023-12-12T10:56:09-08:00",
+          "wage": {
+            "title": "Manager",
+            "hourly_rate": {
+              "amount": 2500,
+              "currency": "USD"
+            },
+            "job_id": "t5mP1TBHXvx4NivxntXwzTwV",
+            "tip_eligible": true
+          },
+          "declared_cash_tip_money": {
+            "amount": 200,
+            "currency": "USD"
+          },
+          "status": "OPEN",
+          "version": 1
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952386
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

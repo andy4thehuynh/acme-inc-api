@@ -1,0 +1,33 @@
+_id: req_9e85606db3894d62961c131c2b7d3134
+type: Request
+parentId: fld_5cc28047ce164833b8df566d68b802bd
+modified: 1740515954032
+created: 1740515954032
+url: https://{{host}}/v2/merchants
+name: ListMerchant
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: cursor
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952370
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

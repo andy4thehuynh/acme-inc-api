@@ -1,0 +1,15 @@
+_id: fld_88304da596394ab8862740090022ec4c
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953958
+created: 1740515953958
+name: Checkout
+description: Endpoints related to Square Checkout -
+  https://docs.connect.squareup.com/articles/square-checkout-overview
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952676
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

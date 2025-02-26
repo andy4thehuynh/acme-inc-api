@@ -1,0 +1,41 @@
+_id: req_bfb62a9d686041eeb8fa5954ec932f6e
+type: Request
+parentId: fld_d7ddf04b80af4313956a19d4a6b72e98
+modified: 1740515954022
+created: 1740515954022
+url: https://{{_['host']}}/v2/gift-cards
+name: CreateGiftCard(digital)
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "gift_card": {
+          "type": "DIGITAL"
+        },
+        "location_id": "{{location_id}}",
+        "idempotency_key": "{% faker 'guid' %}"
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952412
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

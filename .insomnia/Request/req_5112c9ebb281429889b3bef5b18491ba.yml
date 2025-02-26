@@ -1,0 +1,43 @@
+_id: req_5112c9ebb281429889b3bef5b18491ba
+type: Request
+parentId: fld_55f3b0b36d1a444884bd58655f4f4fd0
+modified: 1740515954019
+created: 1740515954019
+url: https://{{host}}/v2/loyalty/accounts/{{loyalty_account_id}}/accumulate
+name: AccumulateLoyaltyPoints
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |+
+    {
+    	  "accumulate_points": {
+    	  	"order_id": "zaLvXHf563SpR1z8nRSQ1Qa6vrFZY",
+    		"points": 10
+    	},
+    	"location_id": "{{location_id}}",
+    	"idempotency_key": "{% faker 'guid' %}"
+       }
+
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952428
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

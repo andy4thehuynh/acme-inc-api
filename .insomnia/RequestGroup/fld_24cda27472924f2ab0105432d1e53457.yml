@@ -1,0 +1,14 @@
+_id: fld_24cda27472924f2ab0105432d1e53457
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953983
+created: 1740515953983
+name: MobilAuthorization
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952575
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

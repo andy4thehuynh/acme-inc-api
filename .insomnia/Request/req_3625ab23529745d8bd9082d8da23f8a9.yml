@@ -1,0 +1,52 @@
+_id: req_3625ab23529745d8bd9082d8da23f8a9
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515954000
+created: 1740515954000
+url: https://{{_['host']}}/v2/catalog/update-item-modifier-lists
+name: UpdateItemModifierLists
+description: |-
+  Updates the [CatalogModifierList](#type-catalogmodifierlist) objects
+  that apply to the targeted [CatalogItem](#type-catalogitem) without having
+  to perform an upsert on the entire item.
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+      "item_ids": [
+        "H42BRLUJ5KTZTTMPVSLFAACQ",
+        "2JXOBJIHCWBQ4NZ3RIXQGJA6"
+      ],
+      "modifier_lists_to_enable": [
+        "H42BRLUJ5KTZTTMPVSLFAACQ",
+        "2JXOBJIHCWBQ4NZ3RIXQGJA6"
+      ],
+      "modifier_lists_to_disable": [
+        "7WRC16CJZDVLSNDQ35PP6YAD"
+      ]
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952520
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

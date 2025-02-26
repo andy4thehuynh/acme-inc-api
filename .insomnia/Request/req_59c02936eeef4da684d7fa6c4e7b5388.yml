@@ -1,0 +1,30 @@
+_id: req_59c02936eeef4da684d7fa6c4e7b5388
+type: Request
+parentId: fld_2fa735bcfd634e0b89058c243bd6ed6d
+modified: 1740515953924
+created: 1740515953924
+url: https://{{host}}/v2/webhooks/subscriptions/{{webhook_subscription_id}}
+name: RetrieveWebhookSubscription
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952705
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

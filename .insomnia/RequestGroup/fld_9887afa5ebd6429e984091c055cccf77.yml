@@ -1,0 +1,14 @@
+_id: fld_9887afa5ebd6429e984091c055cccf77
+type: RequestGroup
+parentId: fld_7e4ca85503504e62a8536eac7c5e3941
+modified: 1740515954009
+created: 1740515954009
+name: Sites
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952476
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

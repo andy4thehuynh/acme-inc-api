@@ -1,0 +1,14 @@
+_id: fld_55f3b0b36d1a444884bd58655f4f4fd0
+type: RequestGroup
+parentId: fld_d28d381da39444e58f67f3c081e4dcc7
+modified: 1740515954018
+created: 1740515954018
+name: Loyalty
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952432
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

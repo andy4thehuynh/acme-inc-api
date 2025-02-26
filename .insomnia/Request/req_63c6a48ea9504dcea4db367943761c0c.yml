@@ -1,0 +1,57 @@
+_id: req_63c6a48ea9504dcea4db367943761c0c
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953997
+created: 1740515953997
+url: https://{{host}}/v2/catalog/images/{{image_id}}
+name: UpdateCatalogImage
+description: ""
+method: PUT
+body:
+  params:
+    - type: file
+      name: file
+      disabled: true
+      fileName: /Users/bwiseman/Downloads/download.jpeg
+    - type: text
+      name: request
+      disabled: true
+      value: |-
+        {
+            "idempotency_key":"{% faker 'guid' %}",
+            "object_id":"XT7455RJ5KX7LXJ5JKMFKOJR",
+            "image":{
+                "type":"IMAGE",
+                "image_data":{
+                    "caption":"Coffey cup"
+                }
+            }
+        }
+  mimeType: multipart/form-data
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Cache-Control
+    value: no-cache
+  - name: Square-Version
+    value: 2019-03-27
+    disabled: true
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952529
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

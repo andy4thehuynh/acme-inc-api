@@ -1,0 +1,73 @@
+_id: req_f5d23d87b4c2406aaa0ae424ceaf9adc
+type: Request
+parentId: fld_584ca854673b476a91d0ae6784270808
+modified: 1740515954012
+created: 1740515954012
+url: https://{{_['host']}}/v2/customers/bulk-create
+name: BulkCreateCustomers
+description: Creates a new customer for the business, which can have associated
+  cards on file.
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "customers": {
+            "8bb76c4f-e35d-4c5b-90de-1194cd9179f0": {
+                "given_name": "Amelia",
+                "family_name": "Earhart",
+                "email_address": "Amelia.Earhart@example.com",
+                "address": {
+                    "address_line_1": "500 Electric Ave",
+                    "address_line_2": "Suite 600",
+                    "locality": "New York",
+                    "administrative_district_level_1": "NY",
+                    "postal_code": "10003",
+                    "country": "US"
+                },
+                "phone_number": "+1-212-555-4240",
+                "reference_id": "YOUR_REFERENCE_ID",
+                "note": "a customer"
+            },
+            "d1689f23-b25d-4932-b2f0-aed00f5e2029": {
+                "given_name": "Marie",
+                "family_name": "Curie",
+                "email_address": "Marie.Curie@example.com",
+                "address": {
+                    "address_line_1": "500 Electric Ave",
+                    "address_line_2": "Suite 601",
+                    "locality": "New York",
+                    "administrative_district_level_1": "NY",
+                    "postal_code": "10003",
+                    "country": "US"
+                },
+                "phone_number": "+1-212-444-4240",
+                "reference_id": "YOUR_REFERENCE_ID",
+                "note": "another customer"
+            }
+        }
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952462
+isPrivate: false
+pathParameters: null
+afterResponseScript: |-
+  var jsonData = JSON.parse(responseBody);
+  postman.setEnvironmentVariable("customer_id", jsonData.customer.id);
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,38 @@
+_id: req_4971f9923a6e4c1796d8d0ca502adaa3
+type: Request
+parentId: fld_e7c32aa83af14a4f973801a906653ce6
+modified: 1740515954005
+created: 1740515954005
+url: https://{{host}}/v2/bookings/{{booking_id}}/cancel
+name: CancelBooking
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "booking_version": "1",
+        "idempotency_key": "{% faker 'guid' %}"
+      }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952497
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

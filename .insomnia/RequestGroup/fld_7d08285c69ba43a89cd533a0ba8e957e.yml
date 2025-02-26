@@ -1,0 +1,14 @@
+_id: fld_7d08285c69ba43a89cd533a0ba8e957e
+type: RequestGroup
+parentId: wrk_1d9b51dcde2d47b39651dd89c932855d
+modified: 1740515953879
+created: 1740515953879
+name: Square API Collection
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952717
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

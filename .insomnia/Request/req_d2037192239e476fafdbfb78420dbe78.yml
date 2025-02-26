@@ -1,0 +1,39 @@
+_id: req_d2037192239e476fafdbfb78420dbe78
+type: Request
+parentId: fld_45685a2b53e849c186ae3e3035b9bc33
+modified: 1740515953972
+created: 1740515953972
+url: https://{{host}}/v2/invoices
+name: ListInvoices
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: location_id
+    value: "{{location_id}}"
+    disabled: false
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: limit
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952619
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

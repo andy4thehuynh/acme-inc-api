@@ -1,0 +1,53 @@
+_id: req_8120cf5a85d54706b1be60d945a13f96
+type: Request
+parentId: fld_28638c15f15e43a4ad66d4517b2afd97
+modified: 1740515953978
+created: 1740515953978
+url: https://{{host}}/v2/orders
+name: CreateOrderTemplet (For a subscription)
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "order": {
+          "location_id": "{{location_id}}",
+          "state": "DRAFT",
+          "line_items": [
+            {
+              "quantity": "1",
+              "catalog_object_id": "M4ZCRV2XZ6E76FC5XDDJZQTK"
+            }
+          ],
+          "discounts": [
+            {
+              "catalog_object_id": "G4KG3ESAZPG4I2H5YPMVFUEW",
+              "scope": "ORDER"
+            }
+          ]
+        }
+      }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952596
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

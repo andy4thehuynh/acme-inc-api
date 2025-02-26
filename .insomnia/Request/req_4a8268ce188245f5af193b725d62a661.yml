@@ -1,0 +1,32 @@
+_id: req_4a8268ce188245f5af193b725d62a661
+type: Request
+parentId: fld_b679bc05f04f499eab6f47f48ea43be7
+modified: 1740515953969
+created: 1740515953969
+url: https://{{host}}/v2/terminals/checkouts/{{checkout_id}}
+name: GetTerminalCheckout
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952639
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,50 @@
+_id: req_31fa74f3023047ebaa06ae30deb33fdc
+type: Request
+parentId: fld_b679bc05f04f499eab6f47f48ea43be7
+modified: 1740515953967
+created: 1740515953967
+url: https://{{host}}/v2/terminals/checkouts
+name: CreateTerminalCheckout-Collect signature
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "checkout": {
+          "amount_money": {
+            "amount": 100,
+            "currency": "USD"
+          },
+          "reference_id": "232323",
+          "note": "hamburger",
+          "payment_type": "CARD_PRESENT",
+          "device_options": {
+            "device_id": "{{device_id}}",
+            "collect_signature": true
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952644
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

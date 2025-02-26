@@ -1,0 +1,56 @@
+_id: req_5050f5bdd8e44d08b0551464f7e51220
+type: Request
+parentId: fld_055118eb71ef476fa757d36d7893cb40
+modified: 1740515953994
+created: 1740515953994
+url: https://{{_['host']}}/v2/orders/custom-attributes/bulk-upsert
+name: BulkUpsertOrderCustomAttributes
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "values": {
+          "dinning": {
+            "custom_attribute": {
+              "key": "dinning",
+              "value": true,
+              "version": 3
+            },
+            "idempotency_key": "{% faker 'guid' %}",
+            "order_id": "{{order_id}}"
+          },
+          "table": {
+            "custom_attribute": {
+              "key": "table",
+              "value": "11",
+              "version": 2
+            },
+            "order_id": "{{order_id}}",
+            "idempotency_key": "{% faker 'guid' %}"
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952542
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,14 @@
+_id: fld_b679bc05f04f499eab6f47f48ea43be7
+type: RequestGroup
+parentId: fld_a020256669e04dcb9688717a7f838d18
+modified: 1740515953965
+created: 1740515953965
+name: TerminalCheckout
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952647
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

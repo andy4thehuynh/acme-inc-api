@@ -1,0 +1,40 @@
+_id: req_d5ce9c689fa34406bce1a6c6cb203845
+type: Request
+parentId: fld_a27432c82c744862ae530e7c4f7c1445
+modified: 1740515953991
+created: 1740515953991
+url: https://{{host}}/v2/orders/{{order_id}}
+name: UpdateOrder
+description: ""
+method: PUT
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "order": {
+            "version": 1,
+            "state": "CANCELED"
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952552
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

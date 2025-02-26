@@ -1,0 +1,41 @@
+_id: req_e2c10c71e1244c72b3ced9c0d5456c35
+type: Request
+parentId: fld_eb23ab58cb3847f7b4ff5b1184f19a34
+modified: 1740515953953
+created: 1740515953953
+url: https://{{host}}/v2/payments/{{payment_id}}/cancel
+name: CancelPaymentByIdempotencyKey
+description: >-
+  Transactions API is deprecated. Please use the Payments API.
+
+
+  This example CancelPayment request cancels a previously authrized payment. For more infomation about delayed payments, see [Take and Refund Payments](https://developer.squareup.com/docs/payments-api/take-and-refund-payments).
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952686
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

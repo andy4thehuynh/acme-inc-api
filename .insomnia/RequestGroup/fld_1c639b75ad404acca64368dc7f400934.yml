@@ -1,0 +1,14 @@
+_id: fld_1c639b75ad404acca64368dc7f400934
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953984
+created: 1740515953984
+name: Devices
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952573
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

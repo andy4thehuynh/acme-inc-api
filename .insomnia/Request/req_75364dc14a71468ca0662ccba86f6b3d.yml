@@ -1,0 +1,65 @@
+_id: req_75364dc14a71468ca0662ccba86f6b3d
+type: Request
+parentId: fld_45685a2b53e849c186ae3e3035b9bc33
+modified: 1740515953973
+created: 1740515953973
+url: https://{{host}}/v2/invoices
+name: CreateInvoiceCardOnFile-For Deposit and balance
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "invoice": {
+          "order_id": "{{_['order_id']}}",
+          "primary_recipient": {
+            "customer_id": "{{_['customer_id']}}"
+          },
+          "delivery_method": "EMAIL",
+          "payment_requests": [
+            {
+              "request_type": "DEPOSIT",
+              "due_date": "2023-11-23",
+              "percentage_requested": "25",
+              "automatic_payment_source": "CARD_ON_FILE",
+              "card_id": "{{_['card_id']}}"
+            },
+            {
+              "request_type": "BALANCE",
+              "due_date": "2023-11-24",
+              "automatic_payment_source": "CARD_ON_FILE",
+              "card_id": "{{_['card_id']}}"
+            }
+          ],
+          "accepted_payment_methods": {
+            "bank_account": true,
+            "card": true,
+            "cash_app_pay": true,
+            "square_gift_card": true
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952617
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

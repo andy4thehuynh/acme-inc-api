@@ -1,0 +1,14 @@
+_id: fld_e7c32aa83af14a4f973801a906653ce6
+type: RequestGroup
+parentId: fld_7e4ca85503504e62a8536eac7c5e3941
+modified: 1740515954001
+created: 1740515954001
+name: Bookings
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952510
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

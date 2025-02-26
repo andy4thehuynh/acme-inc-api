@@ -1,0 +1,14 @@
+_id: fld_02ef5c8ada9c4bd8a62d8b6afe1bccbd
+type: RequestGroup
+parentId: fld_d28d381da39444e58f67f3c081e4dcc7
+modified: 1740515954024
+created: 1740515954024
+name: Gift Card Activity
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952404
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

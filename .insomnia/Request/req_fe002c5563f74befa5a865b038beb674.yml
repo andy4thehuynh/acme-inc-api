@@ -1,0 +1,88 @@
+_id: req_fe002c5563f74befa5a865b038beb674
+type: Request
+parentId: fld_f6c26100798f4e74958e6037a2ce832c
+modified: 1740515954035
+created: 1740515954035
+url: https://{{host}}/v2/locations
+name: CreateLocations
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "location": 
+            {
+                "name": "Boats",
+                "address": {
+                    "address_line_1": "1234 somewhere",
+                    "locality": "Nowhere",
+                    "administrative_district_level_1": "CA",
+                    "postal_code": "94108",
+                    "country": "US"
+                },
+                "timezone": "America/Los_Angeles",
+                "status": "ACTIVE",
+                "country": "US",
+                "language_code": "en-US",
+                "phone_number": "+1 415-212-8888",
+                "business_name": "Doe",
+                "type": "MOBILE",
+                "website_url": "",
+                "business_hours": {
+                    "periods": [
+                        {
+                            "day_of_week": "MON",
+                            "start_local_time": "09:00:00",
+                            "end_local_time": "17:00:00"
+                        },
+                        {
+                            "day_of_week": "TUE",
+                            "start_local_time": "09:00:00",
+                            "end_local_time": "17:00:00"
+                        },
+                        {
+                            "day_of_week": "WED",
+                            "start_local_time": "09:00:00",
+                            "end_local_time": "17:00:00"
+                        },
+                        {
+                            "day_of_week": "THU",
+                            "start_local_time": "09:00:00",
+                            "end_local_time": "17:00:00"
+                        },
+                        {
+                            "day_of_week": "FRI",
+                            "start_local_time": "09:00:00",
+                            "end_local_time": "17:00:00"
+                        }
+                    ]
+                },
+                "business_email": "something@gmail.com",
+                "description": "",
+                "facebook_url": ""
+            }
+
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952354
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

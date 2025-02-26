@@ -1,0 +1,48 @@
+_id: req_2963e04fdff74fb28dada0249effe757
+type: Request
+parentId: fld_55f3b0b36d1a444884bd58655f4f4fd0
+modified: 1740515954019
+created: 1740515954019
+url: https://{{host}}/v2/loyalty/accounts/{{loyalty_account_id}}/adjust
+name: AdjustLoyaltyPoints
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: "{
+
+    \    \"adjust_points\": {
+
+    \      \"points\": 4,
+
+    \      \"reason\": \"MY_REASON\"
+
+    \    },
+
+    \    \"idempotency_key\": \"{% faker 'guid' %}\"
+
+    \  }
+
+    \  "
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952427
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

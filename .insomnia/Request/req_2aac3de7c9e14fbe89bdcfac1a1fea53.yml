@@ -1,0 +1,48 @@
+_id: req_2aac3de7c9e14fbe89bdcfac1a1fea53
+type: Request
+parentId: fld_a27432c82c744862ae530e7c4f7c1445
+modified: 1740515953991
+created: 1740515953991
+url: https://{{host}}/v2/orders/search
+name: SearchOrders (customer)
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "location_ids": [
+            "{{location_id}}"
+        ],
+        "query": {
+            "filter": {
+                "customer_filter": {
+                    "customer_ids": [
+                        "{{customer_id}}"
+                    ]
+                }
+            }
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952554
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

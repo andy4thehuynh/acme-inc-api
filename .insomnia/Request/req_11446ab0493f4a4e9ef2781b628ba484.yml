@@ -1,0 +1,42 @@
+_id: req_11446ab0493f4a4e9ef2781b628ba484
+type: Request
+parentId: fld_1c639b75ad404acca64368dc7f400934
+modified: 1740515953985
+created: 1740515953985
+url: https://{{host}}/v2/devices/codes
+name: CreateDeviceCode
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+      "idempotency_key": "{{$Guid}}",
+      "device_code": {
+        "location_id": "{{location_id}}",
+        "name": "Counter 1",
+        "product_type": "TERMINAL_API"
+      }
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952570
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

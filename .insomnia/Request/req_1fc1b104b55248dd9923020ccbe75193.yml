@@ -1,0 +1,50 @@
+_id: req_1fc1b104b55248dd9923020ccbe75193
+type: Request
+parentId: fld_cba377b2f3d948939157458d27f3081c
+modified: 1740515953995
+created: 1740515953995
+url: https://connect.squareup.com/v2/catalog/search
+name: Query items for tax
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "object_types": [
+            "ITEM",
+            "TAX"
+        ],
+        "query": {
+            "items_for_tax_query": {
+                "tax_ids": [
+                    "UIQJ5BYMW54FR7KKJNWE3WGT"
+                ]
+            }
+        },
+        "limit": 100
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952535
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

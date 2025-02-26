@@ -1,0 +1,58 @@
+_id: req_6434d2d3c1874f74a7456167aac3e537
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953999
+created: 1740515953999
+url: https://{{host}}/v2/catalog/search
+name: SearchCatalogObjects
+description: |-
+  Queries the targeted catalog using a variety of query types
+  ([CatalogQuerySortedAttribute](#type-catalogquerysortedattribute),
+  ([CatalogQueryExact](#type-catalogqueryexact,
+  ([CatalogQueryRange](#type-catalogqueryrange),
+  ([CatalogQueryText](#type-catalogquerytext),
+  ([CatalogQueryItemsForTax](#type-catalogqueryitemsfortax),
+  ([CatalogQueryItemsForModifierList](#type-catalogqueryitemsformodifierlist)).
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "object_types": [
+            "ITEM",
+            "ITEM_VARIATION"
+        ],
+        "query": {
+            "prefix_query": {
+                "attribute_name": "name",
+                "attribute_prefix": "costa"
+            }
+        },
+        "limit": 100,
+        "include_related_objects": true,
+        "include_deleted_objects": true
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952523
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

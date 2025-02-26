@@ -1,0 +1,50 @@
+_id: req_5f0d4d3baf4e4292b37280a01a05cd35
+type: Request
+parentId: fld_9dde730c683b454c8378c18e3d9980b3
+modified: 1740515953949
+created: 1740515953949
+url: https://{{host}}/v2/payments
+name: CreatePaymentAfterpay
+description: >-
+  This example CreatePayment request charges 1 USD to the specified payment
+  source. In this  example, the payment source is a card on file. 
+
+
+  You can also specify a nonce or a gift card as a payment source. For more information about payments and refunds, see [Payments and Refunds Overview](https://developer.squareup.com/docs/payments-api/overview).
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "autocomplete": true,
+        "order_id": "{{_['order_id']}}",
+        "amount_money": {
+            "amount": 100,
+            "currency": "USD"
+        },
+        "source_id": "wnon:afterpay-or-clearpay-ok",
+        "customer_id": "{{_['customer_id']}}"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952695
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

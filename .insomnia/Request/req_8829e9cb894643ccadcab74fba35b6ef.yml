@@ -1,0 +1,46 @@
+_id: req_8829e9cb894643ccadcab74fba35b6ef
+type: Request
+parentId: fld_156d12fb28ce489989e3b1a445bb6c27
+modified: 1740515954034
+created: 1740515954034
+url: https://{{_['host']}}/v2/merchants/custom-attributes/bulk-delete
+name: BulkDeleteMerchantCustomAttributes
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "values": {
+          "id1": {
+            "merchant_id": "{{merchant_id}}",
+            "key": "alternative_seller_name"
+          },
+          "id2": {
+            "merchant_id": "{{merchant_id}}",
+            "key": "has_seen_tutorial"
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952362
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,42 @@
+_id: req_4a068f6de729407ea1cc6bb182ef9200
+type: Request
+parentId: fld_65cbb9c1966741b58b6d0674bea22a5f
+modified: 1740515953981
+created: 1740515953981
+url: https://{{host}}/v2/subscriptions/{{subscription_id}}/pause
+name: PauseSubscription
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "pause_cycle_duration": 3,
+        "pause_reason": "Injury"
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Square-Version
+    value: 2025-01-04
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952586
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

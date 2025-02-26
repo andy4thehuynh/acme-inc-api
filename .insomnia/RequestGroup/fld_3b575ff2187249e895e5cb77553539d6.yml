@@ -1,0 +1,14 @@
+_id: fld_3b575ff2187249e895e5cb77553539d6
+type: RequestGroup
+parentId: fld_26712bf3bb224b51a7488e54dde3d8a7
+modified: 1740515954036
+created: 1740515954036
+name: LocationCustomAttributes
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952351
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

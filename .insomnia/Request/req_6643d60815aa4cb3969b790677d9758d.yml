@@ -1,0 +1,58 @@
+_id: req_6643d60815aa4cb3969b790677d9758d
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953997
+created: 1740515953997
+url: https://{{host}}/v2/catalog/images
+name: CreateCatalogImage
+description: ""
+method: POST
+body:
+  params:
+    - type: file
+      name: file
+      disabled: true
+      fileName: /Users/bwiseman/Downloads/download.jpeg
+    - type: text
+      name: request
+      disabled: true
+      value: |-
+        {
+            "idempotency_key":"{% faker 'guid' %}",
+            "object_id":"F36W2RCMXLWICWGQKLPGXDRP",
+            "image":{
+                "id":"#TEMP_ID",
+                "type":"IMAGE",
+                "image_data":{
+                    "caption":"spearfishing"
+                }
+            }
+        }
+  mimeType: multipart/form-data
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Cache-Control
+    value: no-cache
+  - name: Square-Version
+    value: 2019-03-27
+    disabled: true
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952530
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,50 @@
+_id: req_ae6b6221a9464a758cd31230f64e389c
+type: Request
+parentId: fld_25919ef6d36a42d1a7fcdba6e3263380
+modified: 1740515953958
+created: 1740515953958
+url: https://{{host}}/v2/refunds
+name: RefundPayment (app_fee_money)
+description: This example RefundPayment request refunds a 1 USD. In the request
+  `payment_id` identifies the payment to refund the `amount_money` indicates the
+  amount to refund. For more information, see
+  [Take  Payments](https://developer.squareup.com/docs).
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "payment_id": "{{payment_id}}",
+        "amount_money": {
+            "amount": 100,
+            "currency": "USD"
+        },
+        "app_fee_money":{
+            "amount": 1,
+            "currency": "USD"
+        }, 
+        "reason": "An optional reason for a refund"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952678
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

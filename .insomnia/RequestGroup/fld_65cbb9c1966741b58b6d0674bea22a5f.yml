@@ -1,0 +1,14 @@
+_id: fld_65cbb9c1966741b58b6d0674bea22a5f
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953976
+created: 1740515953976
+name: Subscriptions
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952603
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

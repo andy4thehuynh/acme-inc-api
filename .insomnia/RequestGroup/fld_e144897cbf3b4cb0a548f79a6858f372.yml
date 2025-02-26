@@ -1,0 +1,14 @@
+_id: fld_e144897cbf3b4cb0a548f79a6858f372
+type: RequestGroup
+parentId: fld_7e4ca85503504e62a8536eac7c5e3941
+modified: 1740515954007
+created: 1740515954007
+name: Vendors
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952484
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

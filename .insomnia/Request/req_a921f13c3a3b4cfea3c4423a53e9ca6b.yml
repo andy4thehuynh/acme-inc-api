@@ -1,0 +1,41 @@
+_id: req_a921f13c3a3b4cfea3c4423a53e9ca6b
+type: Request
+parentId: fld_3b575ff2187249e895e5cb77553539d6
+modified: 1740515954036
+created: 1740515954036
+url: https://{{_['host']}}/v2/locations/custom-attribute-definitions
+name: ListLocationCustomAttributeDefinitions
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: GET
+body: {}
+parameters:
+  - name: visibility_filter
+    value: ""
+    disabled: true
+  - name: limit
+    value: ""
+    disabled: true
+  - name: cursor
+    value: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952350
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

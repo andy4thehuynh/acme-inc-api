@@ -1,0 +1,34 @@
+_id: req_4a2c48a59d564c6b9e75418020ef7e14
+type: Request
+parentId: fld_88304da596394ab8862740090022ec4c
+modified: 1740515953959
+created: 1740515953959
+url: https://{{_['host']}}/v2/online-checkout/merchant-settings
+name: RetrieveMerchantSettings
+description: >-
+  This example ListPaymentRefunds request retrieves all refunds. 
+
+
+  For more information about payments and refunds, see [Payments and Refunds Overview](https://developer.squareup.com/docs/payments-api/overview).
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952673
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

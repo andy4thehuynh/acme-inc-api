@@ -1,0 +1,101 @@
+_id: req_7d9f8318f82e4993a6c4cc972eb11232
+type: Request
+parentId: fld_88304da596394ab8862740090022ec4c
+modified: 1740515953961
+created: 1740515953961
+url: https://{{_['host']}}/v2/online-checkout/payment-links
+name: CreateCheckoutLinkOrder
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "checkout_options": {
+            "enable_coupon": true,
+            "accepted_payment_methods": {
+                "afterpay_clearpay": true,
+                "apple_pay": true,
+                "cash_app_pay": true,
+                "google_pay": true
+            },
+            "allow_tipping": true,
+            "ask_for_shipping_address": true,
+            "custom_fields": [
+                {
+                    "title": "Auto color"
+                }
+            ],
+            "enable_loyalty": true,
+            "merchant_support_email": "{{example@mybusiness.com}}",
+            "redirect_url": "{{redirect_url}}",
+            "shipping_fee": {
+                "charge": {
+                    "amount": 100,
+                    "currency": "USD"
+                },
+                "name": "Shipping"
+            }
+        },
+        "order": {
+            "location_id": "{{location_id}}",
+            "line_items": [
+                {
+                    "name": "60,000 mile maintenance",
+                    "quantity": "1",
+                    "base_price_money": {
+                        "amount": 25,
+                        "currency": "USD"
+                    },
+                    "note": "1st line item note"
+                },
+                {
+                    "name": "Tire rotation and balancing",
+                    "quantity": "1",
+                    "base_price_money": {
+                        "amount": 25,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "name": "Wiper fluid replacement",
+                    "quantity": "1",
+                    "base_price_money": {
+                        "amount": 25,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "name": "Oil change",
+                    "quantity": "1",
+                    "base_price_money": {
+                        "amount": 25,
+                        "currency": "USD"
+                    }
+                }
+            ]
+        }
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952668
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,59 @@
+_id: req_7e89d6d9d3814632be15e72aba584ffd
+type: Request
+parentId: fld_55f3b0b36d1a444884bd58655f4f4fd0
+modified: 1740515954020
+created: 1740515954020
+url: https://{{host}}/v2/loyalty/programs/{{loyalty_program_id}}/promotions
+name: CreateLoyaltyPromotion
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "loyalty_promotion": {
+          "name": "Tuesday Happy Hour",
+          "incentive": {
+            "type": "POINTS_MULTIPLIER",
+            "points_multiplier_data": {
+              "multiplier": "2.0"
+            }
+          },
+          "available_time": {
+            "time_periods": [
+              "BEGIN:VEVENT\nDTSTART:20220816T160000\nDURATION:PT2H\nRRULE:FREQ=WEEKLY;UNTIL=20221001T000000;BYDAY=TU\nEND:VEVENT"
+            ]
+          },
+          "trigger_limit": {
+            "times": 1,
+            "interval": "DAY"
+          },
+          "qualifying_category_ids": [
+            "RU5WBWNYPWLERUQBCVSQQVEG",
+            "DZQN424C62TNLHSTOLMFN6I5"
+          ]
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952422
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

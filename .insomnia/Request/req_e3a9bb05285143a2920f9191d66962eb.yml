@@ -1,0 +1,59 @@
+_id: req_e3a9bb05285143a2920f9191d66962eb
+type: Request
+parentId: fld_5c1c46671cd34894825db93675e6b85c
+modified: 1740515953963
+created: 1740515953963
+url: https://{{host}}/v2/terminals/actions
+name: CreateTerminalAction-Data collection-Menu select
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "action": {
+          "device_id": "{{device_id}}",
+          "type": "SELECT",
+          "select_options": {
+            "title": "Enroll in reminders",
+            "body": "How would you like to be contacted?",
+            "options": [
+              {
+                "reference_id": "Option 1",
+                "title": "Text Message"
+              },
+              {
+                "reference_id": "Option 2",
+                "title": "Email"
+              },
+              {
+                "reference_id": "Option 3",
+                "title": "I do not want to be contact"
+              }
+            ]
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952657
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

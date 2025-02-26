@@ -1,0 +1,34 @@
+_id: req_799bc5178f3340e8b33f6e445c13d768
+type: Request
+parentId: fld_e144897cbf3b4cb0a548f79a6858f372
+modified: 1740515954009
+created: 1740515954009
+url: https://{{host}}/v2/vendors/{{vendor_id}}
+name: RetrieveVendor
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+  - name: Square-Version
+    value: 2022-03-16
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952478
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

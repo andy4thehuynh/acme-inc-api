@@ -1,0 +1,35 @@
+_id: req_afc9a7294a9c4366a1290bc44d400822
+type: Request
+parentId: fld_6d787e428c6547f586f6cff9ab87a15f
+modified: 1740515954010
+created: 1740515954010
+url: https://{{host}}/v2/sites/{{site_id}}/snippet
+name: RetrieveSnippet
+description: >-
+  This example GetPayment request retrieves a specific payment by specifying
+  `payment_id` in the URL endpoint. 
+
+
+  You can also specify a nonce or a gift card as a payment source. For more information, see [Payments and Refunds Overview](https://developer.squareup.com/docs/payments-api/overview).
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952472
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

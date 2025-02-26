@@ -1,0 +1,14 @@
+_id: fld_7ba8571f704b4b018ee01f62b9866abc
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953985
+created: 1740515953985
+name: ApplePay
+description: Not Supported in Sandbox
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952567
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

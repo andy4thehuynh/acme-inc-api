@@ -1,0 +1,41 @@
+_id: req_0e5cf8350bb1465dab4869b7784f87a1
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953999
+created: 1740515953999
+url: https://{{host}}/v2/catalog/object/{{object_id}}
+name: RetrieveCatalogObject
+description: |-
+  Returns a single [CatalogItem](#type-catalogitem) as a
+  [CatalogObject](#type-catalogobject) based on the provided ID. The returned
+  object includes all of the relevant [CatalogItem](#type-catalogitem)
+  information including: [CatalogItemVariation](#type-catalogitemvariation)
+  children, references to its
+  [CatalogModifierList](#type-catalogmodifierlist) objects, and the ids of
+  any [CatalogTax](#type-catalogtax) objects that apply to it.
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952524
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

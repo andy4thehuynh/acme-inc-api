@@ -1,0 +1,14 @@
+_id: fld_745972974b91499ab58c0c1d79fc0032
+type: RequestGroup
+parentId: fld_7d08285c69ba43a89cd533a0ba8e957e
+modified: 1740515953888
+created: 1740515953888
+name: Devs Essentials
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952716
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

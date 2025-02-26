@@ -1,0 +1,14 @@
+_id: fld_f6c26100798f4e74958e6037a2ce832c
+type: RequestGroup
+parentId: fld_26712bf3bb224b51a7488e54dde3d8a7
+modified: 1740515954035
+created: 1740515954035
+name: Locations
+description: https://docs.connect.squareup.com/api/connect/v2#navsection-locations
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952356
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

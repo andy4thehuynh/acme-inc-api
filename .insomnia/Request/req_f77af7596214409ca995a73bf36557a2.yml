@@ -1,0 +1,70 @@
+_id: req_f77af7596214409ca995a73bf36557a2
+type: Request
+parentId: fld_e144897cbf3b4cb0a548f79a6858f372
+modified: 1740515954008
+created: 1740515954008
+url: https://{{_['host']}}/v2/vendors/bulk-update
+name: BulkUpdateVendors
+description: ""
+method: PUT
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "vendors": {
+          "UDFF27EGUGI5HLV7": {
+            "idempotency_key": "{% faker 'guid' %}",
+            "vendor": {
+              "id": "UDFF27EGUGI5HLV7",
+              "address": {
+                "address_line_1": "101 Main Street",
+                "address_line_2": "Suite 1",
+                "locality": "New York",
+                "administrative_district_level_1": "NY",
+                "postal_code": "10003",
+                "country": "US"
+              },
+              "version": 1
+            }
+          },
+          "ORSW4GY32OLXCIVV": {
+            "idempotency_key": "{% faker 'guid' %}",
+            "vendor": {
+              "id": "ORSW4GY32OLXCIVV",
+              "address": {
+                "address_line_1": "1455 Market Street",
+                "address_line_2": "Suite 600",
+                "locality": "San Francisco",
+                "administrative_district_level_1": "CA",
+                "postal_code": "94103",
+                "country": "US"
+              },
+              "version": 1
+            }
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+  - name: Square-Version
+    value: 2022-03-16
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952481
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

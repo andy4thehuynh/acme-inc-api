@@ -1,0 +1,36 @@
+_id: req_619faa5584434709b27c55165249e1b5
+type: Request
+parentId: fld_9044b9fe01584a59b614889386e4d737
+modified: 1740515954018
+created: 1740515954018
+url: https://{{host}}/v2/customers/segments
+name: ListCustomerSegments
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: limit
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952434
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

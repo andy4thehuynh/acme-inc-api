@@ -1,0 +1,14 @@
+_id: fld_584ca854673b476a91d0ae6784270808
+type: RequestGroup
+parentId: fld_d28d381da39444e58f67f3c081e4dcc7
+modified: 1740515954011
+created: 1740515954011
+name: Customers
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952465
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

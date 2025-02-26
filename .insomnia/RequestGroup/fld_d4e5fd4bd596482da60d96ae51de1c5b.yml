@@ -1,0 +1,14 @@
+_id: fld_d4e5fd4bd596482da60d96ae51de1c5b
+type: RequestGroup
+parentId: fld_7e4ca85503504e62a8536eac7c5e3941
+modified: 1740515954010
+created: 1740515954010
+name: Cash Drawers
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952470
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

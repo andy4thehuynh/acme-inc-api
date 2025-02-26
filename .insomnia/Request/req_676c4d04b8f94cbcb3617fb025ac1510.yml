@@ -1,0 +1,58 @@
+_id: req_676c4d04b8f94cbcb3617fb025ac1510
+type: Request
+parentId: fld_25919ef6d36a42d1a7fcdba6e3263380
+modified: 1740515953957
+created: 1740515953957
+url: https://{{host}}/v2/refunds
+name: ListPaymentRefunds
+description: >-
+  This example ListPaymentRefunds request retrieves all refunds. 
+
+
+  For more information about payments and refunds, see [Payments and Refunds Overview](https://developer.squareup.com/docs/payments-api/overview).
+method: GET
+body: {}
+parameters:
+  - name: begin_time
+    value: ""
+    disabled: true
+  - name: end_time
+    value: ""
+    disabled: true
+  - name: sort_order
+    value: ""
+    disabled: true
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: location_id
+    value: ""
+    disabled: true
+  - name: status
+    value: ""
+    disabled: true
+  - name: source_type
+    value: ""
+    disabled: true
+  - name: limit
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952680
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_e382d458b992478388e43e96576d34ce
+type: Request
+parentId: fld_5875a580b0ce44eca795eba2512baffa
+modified: 1740515953971
+created: 1740515953971
+url: https://{{host}}/v2/disputes/{{dispute_id}}/accept
+name: AcceptDispute
+description: ""
+method: POST
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952627
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

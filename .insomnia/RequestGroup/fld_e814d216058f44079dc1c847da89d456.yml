@@ -1,0 +1,14 @@
+_id: fld_e814d216058f44079dc1c847da89d456
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953981
+created: 1740515953981
+name: Bank Accounts
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952583
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

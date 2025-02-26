@@ -1,0 +1,50 @@
+_id: req_7e096768d02c485084b9ff259f074ed1
+type: Request
+parentId: fld_45685a2b53e849c186ae3e3035b9bc33
+modified: 1740515953973
+created: 1740515953973
+url: https://{{host}}/v2/invoices/search
+name: SearchInvoice
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |
+    {
+        "query": {
+          "filter": {
+            "location_ids": [
+              "{{location_id}}"
+            ],
+            "customer_ids": [
+              "{{customer_id}}"
+            ]
+          },
+          "sort": {
+            "field": "INVOICE_SORT_DATE",
+            "order": "DESC"
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952616
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

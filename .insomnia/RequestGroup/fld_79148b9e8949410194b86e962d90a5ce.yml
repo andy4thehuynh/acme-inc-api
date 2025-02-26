@@ -1,0 +1,14 @@
+_id: fld_79148b9e8949410194b86e962d90a5ce
+type: RequestGroup
+parentId: fld_7e4ca85503504e62a8536eac7c5e3941
+modified: 1740515954000
+created: 1740515954000
+name: Inventory
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952518
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

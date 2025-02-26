@@ -1,0 +1,64 @@
+_id: req_958f202b7e5949ca9a0cf4f6af0e42fe
+type: Request
+parentId: fld_55f3b0b36d1a444884bd58655f4f4fd0
+modified: 1740515954020
+created: 1740515954020
+url: https://{{host}}/v2/loyalty/events/search
+name: SearchLoyaltyEvents
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "limit": 30,
+        "query": {
+          "filter": {
+            "date_time_filter": {
+              "created_at": {
+                "end_at": "2023-12-29T00:15:22.620Z",
+                "start_at": "2023-11-29T00:15:22.620Z"
+              }
+            },
+            "location_filter": {
+              "location_ids": [
+                "{{_['location_id']}}"
+              ]
+            },
+            "loyalty_account_filter": {
+              "loyalty_account_id": "bb5e7404-c4af-4eb8-b437-949be85023fa"
+            },
+            "order_filter": {
+              "order_id": "zaLvXHf563SpR1z8nRSQ1Qa6vrFZY"
+            },
+            "type_filter": {
+              "types": [
+                "REDEEM_REWARD",
+                "EXPIRE_POINTS"
+              ]
+            }
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952426
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

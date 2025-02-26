@@ -1,0 +1,57 @@
+_id: req_0d3a7129e41b46d08057fba10eb88acb
+type: Request
+parentId: fld_584ca854673b476a91d0ae6784270808
+modified: 1740515954011
+created: 1740515954011
+url: https://{{host}}/v2/customers
+name: CreateCustomer
+description: Creates a new customer for the business, which can have associated
+  cards on file.
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+      "idempotency_key": "{% faker 'guid' %}",
+      "given_name": "Amelia",
+      "family_name": "Earhart",
+      "company_name": "Square",
+      "nickname": "Yeo", 
+      "email_address": "Amelia.Earhart@example.com",
+      "address": {
+        "address_line_1": "500 Electric Ave",
+        "address_line_2": "Suite 600",
+        "locality": "New York",
+        "administrative_district_level_1": "NY",
+        "postal_code": "10003",
+        "country": "US"
+      },
+      "phone_number": "1-212-555-4240",
+      "reference_id": "YOUR_REFERENCE_ID",
+      "note": "a customer",
+      "birthday": "2008-03-05T00:00:00-00:00"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952463
+isPrivate: false
+pathParameters: null
+afterResponseScript: |-
+  var jsonData = JSON.parse(responseBody);
+  postman.setEnvironmentVariable("customer_id", jsonData.customer.id);
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

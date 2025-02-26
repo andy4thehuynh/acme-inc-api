@@ -1,0 +1,30 @@
+_id: req_4d71b8463d9f48e4813316a12f879838
+type: Request
+parentId: fld_3b0f0b39ff454ee6bedd1359e35ffe02
+modified: 1740515954017
+created: 1740515954017
+url: https://{{host}}/v2/customers/groups
+name: ListCustomerGroups
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952440
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

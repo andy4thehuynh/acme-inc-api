@@ -1,0 +1,32 @@
+_id: req_56bea51790644d60bde6379910da8c49
+type: Request
+parentId: fld_9175d77e59054ee586e3c46c6613e3fa
+modified: 1740515954007
+created: 1740515954007
+url: https://{{_['host']}}/v2/bookings/{{_['booking_id']}}/custom-attributes/{{_['custom_attribute_key']}}
+name: RetrieveBookingCustomAttribute
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952486
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

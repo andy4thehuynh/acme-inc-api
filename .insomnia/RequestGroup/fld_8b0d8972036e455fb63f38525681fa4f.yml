@@ -1,0 +1,14 @@
+_id: fld_8b0d8972036e455fb63f38525681fa4f
+type: RequestGroup
+parentId: fld_a020256669e04dcb9688717a7f838d18
+modified: 1740515953969
+created: 1740515953969
+name: TerminalRefund-(only for Interac debit cards in Canada)
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952636
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

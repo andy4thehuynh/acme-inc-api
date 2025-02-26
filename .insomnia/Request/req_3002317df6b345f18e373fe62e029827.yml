@@ -1,0 +1,74 @@
+_id: req_3002317df6b345f18e373fe62e029827
+type: Request
+parentId: fld_e144897cbf3b4cb0a548f79a6858f372
+modified: 1740515954008
+created: 1740515954008
+url: https://{{_['host']}}/v2/vendors/bulk-create
+name: BulkCreateVendors
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "vendors": {
+          "0e5785ba-8371-48ed-8317-909edc33a08f": {
+            "name": "Vendor A",
+            "address": {
+              "address_line_1": "101 Main Street",
+              "address_line_2": "Suite 1",
+              "locality": "City",
+              "administrative_district_level_1": "State",
+              "postal_code": "10003",
+              "country": "US"
+            },
+            "contacts": [
+              {
+                "name": "Vendor A's Contact",
+                "email_address": "joe@acme.com",
+                "phone_number": "1-212-555-4250",
+                "ordinal": 0
+              }
+            ],
+            "account_number": "4025391",
+            "note": "a vendor",
+            "status": "ACTIVE"
+          },
+          "0432162f-e3d4-4627-ad5f-f60794f220c3": {
+            "name": "Vendor 2A",
+            "status": "ACTIVE",
+            "contacts": [
+              {
+                "name": "Vendor B's Contact",
+                "email_address": "annie@acme.com",
+                "phone_number": "1-212-555-4251",
+                "ordinal": 1
+              }
+            ]
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+  - name: Square-Version
+    value: 2022-03-16
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952483
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

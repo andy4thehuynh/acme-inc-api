@@ -1,0 +1,44 @@
+_id: req_3bba6a756a4d4851a01e6f7611b6fbf9
+type: Request
+parentId: fld_a27432c82c744862ae530e7c4f7c1445
+modified: 1740515953992
+created: 1740515953992
+url: https://{{host}}/v2/orders/{{order_id}}/pay
+name: PayOrder
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "order_verision": 2,
+        "payment_ids": [
+            "{{payment_id_1}}",
+            "{{payment_id_2}}"
+        ]
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952550
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

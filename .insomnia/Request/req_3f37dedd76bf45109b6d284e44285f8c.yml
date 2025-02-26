@@ -1,0 +1,38 @@
+_id: req_3f37dedd76bf45109b6d284e44285f8c
+type: Request
+parentId: fld_e7c32aa83af14a4f973801a906653ce6
+modified: 1740515954003
+created: 1740515954003
+url: https://{{_['host']}}/v2/bookings/location-booking-profiles/{{_['location_id']}}
+name: RetrieveLocationBookingProfile
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: GET
+body: {}
+parameters:
+  - name: limit
+    value: ""
+    disabled: true
+  - name: cursor
+    value: ""
+    disabled: true
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952503
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

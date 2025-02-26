@@ -1,0 +1,46 @@
+_id: req_00f9f66feb314d09b29dc76d94c86110
+type: Request
+parentId: fld_5c1c46671cd34894825db93675e6b85c
+modified: 1740515953964
+created: 1740515953964
+url: https://{{host}}/v2/terminals/actions
+name: CreateTerminalAction-QR code
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: >-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "action": {
+          "device_id": "{{device_id}}",
+          "type": "QR_CODE",
+          "qr_code_options": {
+            "title": "Download the app",
+            "body": "Skip the line with order ahead. Scan the QR code to download the app.",
+            "barcode_contents": "BEGIN:VEVENT\nSUMMARY:dtestewtse\nDTSTART:20210316T230200Z\nDTEND:20210317T000200Z\nEND:VEVENT\n"
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952656
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

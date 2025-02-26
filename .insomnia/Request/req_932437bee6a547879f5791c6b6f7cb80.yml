@@ -1,0 +1,48 @@
+_id: req_932437bee6a547879f5791c6b6f7cb80
+type: Request
+parentId: fld_d4e5fd4bd596482da60d96ae51de1c5b
+modified: 1740515954010
+created: 1740515954010
+url: https://{{_['host']}}/v2/cash-drawers/shifts
+name: ListCashDrawerShifts
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: location_id
+    value: "{{location_id}}"
+    disabled: false
+  - name: sort_order
+    value: ""
+    disabled: true
+  - name: begin_time
+    value: ""
+    disabled: true
+  - name: end_time
+    value: ""
+    disabled: true
+  - name: limit
+    value: ""
+    disabled: true
+  - name: cursor
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952469
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

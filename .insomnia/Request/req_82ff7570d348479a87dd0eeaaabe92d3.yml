@@ -1,0 +1,32 @@
+_id: req_82ff7570d348479a87dd0eeaaabe92d3
+type: Request
+parentId: fld_55f3b0b36d1a444884bd58655f4f4fd0
+modified: 1740515954021
+created: 1740515954021
+url: https://{{host}}/v2/loyalty/rewards/{{reward_id}}
+name: DeleteLoyaltyRewards
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952417
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

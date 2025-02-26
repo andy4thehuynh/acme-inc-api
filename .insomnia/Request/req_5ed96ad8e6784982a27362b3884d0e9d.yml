@@ -1,0 +1,78 @@
+_id: req_5ed96ad8e6784982a27362b3884d0e9d
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953998
+created: 1740515953998
+url: https://{{host}}/v2/catalog/object
+name: UpsertCatalogObject
+description: Creates or updates the target [CatalogObject](#type-catalogobject).
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "object": {
+            "type": "ITEM",
+            "id": "#Coffee",
+            "present_at_all_locations": true,
+            "item_data": {
+                "name": "Coffee",
+                "description": "Hot Bean Juice",
+                "variations": [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "#Coffee_Regular",
+                        "present_at_all_locations": true,
+                        "item_variation_data": {
+                            "item_id": "#Coffee",
+                            "name": "Regular",
+                            "pricing_type": "FIXED_PRICING",
+                            "price_money": {
+                                "amount": 250,
+                                "currency": "USD"
+                            }
+                        }
+                    },
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "#Coffee_Large",
+                        "present_at_all_locations": true,
+                        "item_variation_data": {
+                            "item_id": "#Coffee",
+                            "name": "Large",
+                            "pricing_type": "FIXED_PRICING",
+                            "price_money": {
+                                "amount": 350,
+                                "currency": "USD"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952526
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

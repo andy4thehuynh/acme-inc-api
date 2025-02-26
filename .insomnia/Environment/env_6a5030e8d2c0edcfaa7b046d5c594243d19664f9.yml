@@ -1,0 +1,25 @@
+_id: env_6a5030e8d2c0edcfaa7b046d5c594243d19664f9
+type: Environment
+parentId: wrk_1d9b51dcde2d47b39651dd89c932855d
+modified: 1740516133221
+created: 1740515956216
+name: Base Environment
+data:
+  host: connect.squareupsandbox.com
+  access_token: EAAAlxyLahMpQTAofruS7sWQRXhgwiSpVpFuFnW3McMKL3jYQ4ytIiJ1UOvzuPhc
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1740515956216
+environmentType: kv
+kvPairData:
+  - id: envPair_ffe1322d44144edaaf8423704d184375
+    name: host
+    value: connect.squareupsandbox.com
+    type: str
+    enabled: true
+  - id: envPair_ca6ea066acda4169bdd83e7cfeef7974
+    name: access_token
+    value: EAAAlxyLahMpQTAofruS7sWQRXhgwiSpVpFuFnW3McMKL3jYQ4ytIiJ1UOvzuPhc
+    type: str
+    enabled: true

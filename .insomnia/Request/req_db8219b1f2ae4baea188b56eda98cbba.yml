@@ -1,0 +1,32 @@
+_id: req_db8219b1f2ae4baea188b56eda98cbba
+type: Request
+parentId: fld_156d12fb28ce489989e3b1a445bb6c27
+modified: 1740515954034
+created: 1740515954034
+url: https://{{_['host']}}/v2/merchants/{{_['merchant_id']}}/custom-attributes/{{_['custom_attribute_key']}}
+name: DeleteMerchantCustomAttribute
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952359
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

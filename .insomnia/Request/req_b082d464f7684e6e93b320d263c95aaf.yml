@@ -1,0 +1,39 @@
+_id: req_b082d464f7684e6e93b320d263c95aaf
+type: Request
+parentId: fld_3b0f0b39ff454ee6bedd1359e35ffe02
+modified: 1740515954017
+created: 1740515954017
+url: https://{{host}}/v2/customers/groups/{{group_id}}
+name: UpdateCustomerGroups
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"group":{
+    		"name": "Members"
+    	}
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952436
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

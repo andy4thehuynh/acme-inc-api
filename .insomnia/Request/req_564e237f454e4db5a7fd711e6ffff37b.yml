@@ -1,0 +1,61 @@
+_id: req_564e237f454e4db5a7fd711e6ffff37b
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953999
+created: 1740515953999
+url: https://{{host}}/v2/catalog/search
+name: SearchCatalogObjects(SKU)
+description: |-
+  Queries the targeted catalog using a variety of query types
+  ([CatalogQuerySortedAttribute](#type-catalogquerysortedattribute),
+  ([CatalogQueryExact](#type-catalogqueryexact,
+  ([CatalogQueryRange](#type-catalogqueryrange),
+  ([CatalogQueryText](#type-catalogquerytext),
+  ([CatalogQueryItemsForTax](#type-catalogqueryitemsfortax),
+  ([CatalogQueryItemsForModifierList](#type-catalogqueryitemsformodifierlist)).
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "object_types": [
+            "ITEM",
+            "ITEM_VARIATION"
+        ],
+        "query": {
+            "prefix_query": {
+                "attribute_name": "sku",
+                "attribute_prefix": "123456789012345678901234567890"
+            }
+        },
+        "limit": 100,
+        "include_related_objects": true,
+        "include_deleted_objects": true
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Square-Version
+    value: 2020-02-26
+    disabled: true
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952522
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

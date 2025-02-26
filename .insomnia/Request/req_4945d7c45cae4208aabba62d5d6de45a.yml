@@ -1,0 +1,98 @@
+_id: req_4945d7c45cae4208aabba62d5d6de45a
+type: Request
+parentId: fld_f6c26100798f4e74958e6037a2ce832c
+modified: 1740515954036
+created: 1740515954036
+url: https://{{host}}/v2/locations/{{location_id}}
+name: UpdateLocations
+description: Provides summary information for all of a business's locations.
+method: PUT
+body:
+  mimeType: text/plain
+  text: >-
+    {
+        "location": {
+            "id": "3Z4V4WHQK64X9",
+            "name": "Boats",
+            "address": {
+                "address_line_1": "13970 Hannumn Ct",
+                "locality": "WALNUT GROVE",
+                "administrative_district_level_1": "CA",
+                "postal_code": "94133",
+                "country": "US"
+            },
+            "timezone": "America/Los_Angeles",
+            "capabilities": [
+                "CREDIT_CARD_PROCESSING"
+            ],
+            "status": "ACTIVE",
+            "created_at": "2016-12-22T21:55:23Z",
+            "merchant_id": "0F5SS1WQBNTGG",
+            "country": "US",
+            "language_code": "en-US",
+            "currency": "USD",
+            "business_name": "Boats",
+            "type": "MOBILE",
+            "website_url": "",
+            "business_hours": {
+                "periods": [
+                    {
+                        "day_of_week": "MON",
+                        "start_local_time": "09:00:00",
+                        "end_local_time": "17:00:00"
+                    },
+                    {
+                        "day_of_week": "TUE",
+                        "start_local_time": "09:00:00",
+                        "end_local_time": "17:00:00"
+                    },
+                    {
+                        "day_of_week": "WED",
+                        "start_local_time": "09:00:00",
+                        "end_local_time": "17:00:00"
+                    },
+                    {
+                        "day_of_week": "THU",
+                        "start_local_time": "09:00:00",
+                        "end_local_time": "17:00:00"
+                    },
+                    {
+                        "day_of_week": "FRI",
+                        "start_local_time": "09:00:00",
+                        "end_local_time": "17:00:00"
+                    }
+                ]
+            },
+            "description": "",
+            "facebook_url": "",
+            "coordinates": {
+                "latitude": 38.2421,
+                "longitude": -121.5116
+            },
+            "logo_url": "https://d1g145x70srn7h.cloudfront.net/files/bfddff14f7c2c6f13a65514a46cbcd54a16644d1/original.jpeg",
+            "pos_background_url": "https://d1g145x70srn7h.cloudfront.net/files/bfddff14f7c2c6f13a65514a46cbcd54a16644d1/original.jpeg",
+            "mcc": "7999"
+        }
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952352
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

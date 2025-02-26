@@ -1,0 +1,45 @@
+_id: req_21a1b33ecfb74b0a8ac957f4cf6a05ad
+type: Request
+parentId: fld_1d8bacf69eb846938cc2722f68ffa196
+modified: 1740515954030
+created: 1740515954030
+url: https://{{_['host']}}/v2/team-members/search
+name: SearchTeamMembers
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |+
+    
+    {
+      "query": {
+        "filter": {
+          "location_ids" : [ "{{location_id}}", "{{location_id}}" ],
+          "status": "ACTIVE"
+        }
+      },
+      "limit": 25
+    }
+
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952377
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

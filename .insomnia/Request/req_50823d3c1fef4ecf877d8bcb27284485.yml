@@ -1,0 +1,50 @@
+_id: req_50823d3c1fef4ecf877d8bcb27284485
+type: Request
+parentId: fld_9175d77e59054ee586e3c46c6613e3fa
+modified: 1740515954006
+created: 1740515954006
+url: https://{{_['host']}}/v2/bookings/custom-attributes/bulk-delete
+name: BulkDeleteBookingCustomAttributes
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "values": {
+            "id1": {
+                "key": "ambient-music",
+                "booking_id": "N3NCVYY3WS27HF0HKANA3R9FP8"
+            },
+            "id2": {
+                "key": "ownsShampoo",
+                "booking_id": "SY8EMWRNDN3TQDP2H4KS1QWMMM"
+            },
+            "id3": {
+                "key": "favoriteShampoo",
+                "booking_id": "SY8EMWRNDN3TQDP2H4KS1QWMMM"
+            }
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952490
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,14 @@
+_id: fld_156d12fb28ce489989e3b1a445bb6c27
+type: RequestGroup
+parentId: fld_26712bf3bb224b51a7488e54dde3d8a7
+modified: 1740515954032
+created: 1740515954032
+name: MerchantCustomAttributes
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952368
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

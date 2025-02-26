@@ -1,0 +1,30 @@
+_id: req_e3e6a143c69742dd9169564193b61acf
+type: Request
+parentId: fld_79148b9e8949410194b86e962d90a5ce
+modified: 1740515954000
+created: 1740515954000
+url: https://{{host}}/v2/inventory/adjustment/{{adjustment_id}}
+name: RetrieveInventoryAdjustment
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952517
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

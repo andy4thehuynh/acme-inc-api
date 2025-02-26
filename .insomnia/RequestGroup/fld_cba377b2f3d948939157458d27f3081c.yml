@@ -1,0 +1,14 @@
+_id: fld_cba377b2f3d948939157458d27f3081c
+type: RequestGroup
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515953995
+created: 1740515953995
+name: Catalog Query
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952536
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

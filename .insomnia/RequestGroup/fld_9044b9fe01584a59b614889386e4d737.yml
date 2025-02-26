@@ -1,0 +1,14 @@
+_id: fld_9044b9fe01584a59b614889386e4d737
+type: RequestGroup
+parentId: fld_d28d381da39444e58f67f3c081e4dcc7
+modified: 1740515954018
+created: 1740515954018
+name: CustomerSegments
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952435
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

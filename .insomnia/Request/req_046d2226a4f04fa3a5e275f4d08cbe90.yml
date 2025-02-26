@@ -1,0 +1,51 @@
+_id: req_046d2226a4f04fa3a5e275f4d08cbe90
+type: Request
+parentId: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+modified: 1740515954000
+created: 1740515954000
+url: https://{{_['host']}}/v2/catalog/update-item-taxes
+name: UpdateItemTaxes
+description: |-
+  Updates the [CatalogTax](#type-catalogtax) objects that apply to the
+  targeted [CatalogItem](#type-catalogitem) without having to perform an
+  upsert on the entire item.
+method: POST
+body:
+  mimeType: text/plain
+  text: |-2
+      {
+        "item_ids": [
+        "H42BRLUJ5KTZTTMPVSLFAACQ",
+        "2JXOBJIHCWBQ4NZ3RIXQGJA6"
+      ],
+      "taxes_to_enable": [
+        "4WRCNHCJZDVLSNDQ35PP6YAD"
+      ],
+      "taxes_to_disable": [
+        "AQCEGCEBBQONINDOHRGZISEX"
+      ]
+    }
+parameters: []
+headers:
+  - name: Accept
+    value: application/json
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952519
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

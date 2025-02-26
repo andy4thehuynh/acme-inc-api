@@ -1,0 +1,37 @@
+_id: req_5d5397eceb7d4a9fa5f36cfaff950475
+type: Request
+parentId: fld_2fa735bcfd634e0b89058c243bd6ed6d
+modified: 1740515953927
+created: 1740515953927
+url: https://{{_['host']}}/v2/webhooks/subscriptions/{{_['webhook_subscription_id']}}/signature-key
+name: UpdateWebhookSubscriptionKey
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}"
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952703
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

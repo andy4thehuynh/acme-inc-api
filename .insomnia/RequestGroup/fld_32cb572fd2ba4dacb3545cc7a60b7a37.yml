@@ -1,0 +1,14 @@
+_id: fld_32cb572fd2ba4dacb3545cc7a60b7a37
+type: RequestGroup
+parentId: fld_84054720e47846f69adf5fe6b5529308
+modified: 1740515953975
+created: 1740515953975
+name: Cards
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952608
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

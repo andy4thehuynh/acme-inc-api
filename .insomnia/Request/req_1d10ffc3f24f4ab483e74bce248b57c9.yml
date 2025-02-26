@@ -1,0 +1,45 @@
+_id: req_1d10ffc3f24f4ab483e74bce248b57c9
+type: Request
+parentId: fld_32cb572fd2ba4dacb3545cc7a60b7a37
+modified: 1740515953975
+created: 1740515953975
+url: https://{{host}}/v2/cards
+name: ListCards
+description: Lists a business's customers.
+method: GET
+body: {}
+parameters:
+  - name: cursor
+    value: ""
+    disabled: true
+  - name: customer_id
+    value: ""
+    disabled: true
+  - name: include_disabled
+    value: ""
+    disabled: true
+  - name: reference_id
+    value: ""
+    disabled: true
+  - name: sort_order
+    value: ""
+    disabled: true
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952607
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

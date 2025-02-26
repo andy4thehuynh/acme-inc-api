@@ -1,0 +1,55 @@
+_id: req_71694fc836144284a96f32ee5d923626
+type: Request
+parentId: fld_eb23ab58cb3847f7b4ff5b1184f19a34
+modified: 1740515953955
+created: 1740515953955
+url: https://{{host}}/v2/payments/{{payment_id}}
+name: UpdatePayment
+description: >-
+  This example CreatePayment request charges 1 USD to the specified payment
+  source. In this  example, the payment source is a card on file. 
+
+
+  You can also specify a nonce or a gift card as a payment source. For more information about payments and refunds, see [Payments and Refunds Overview](https://developer.squareup.com/docs/payments-api/overview).
+method: PUT
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "payment": {
+          "amount_money": {},
+          "approved_money": {
+            "amount": 100,
+            "currency": "USD"
+          },
+          "app_fee_money": {},
+          "tip_money": {
+            "amount": 100,
+            "currency": "USD"
+          },
+          "version_token": "{{version_token}}"
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952684
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

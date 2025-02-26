@@ -1,0 +1,51 @@
+_id: req_974d8c0bfb6d4daa80d7754326484c0a
+type: Request
+parentId: fld_02ef5c8ada9c4bd8a62d8b6afe1bccbd
+modified: 1740515954026
+created: 1740515954026
+url: https://{{host}}/v2/orders
+name: CreateOrder(gift card)
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |
+    {
+     "idempotency_key": "{% faker 'guid' %}",
+     "order": {
+       "line_items": [
+         {
+           "name": "eGiftCard via API",
+           "quantity": "1",
+           "item_type": "GIFT_CARD",
+           "base_price_money": {
+             "amount": 2500,
+             "currency": "USD"
+           }
+         }
+       ],
+       "location_id": "{{location_id}}"
+     }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952398
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

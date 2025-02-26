@@ -1,0 +1,32 @@
+_id: req_e51e92ef4d0443c59ff33b75f016dd4f
+type: Request
+parentId: fld_45685a2b53e849c186ae3e3035b9bc33
+modified: 1740515953974
+created: 1740515953974
+url: https://{{host}}/v2/invoices/{{invoice_id}}/attachments/{{attachment_id}}
+name: DeleteInvoiceAttachment
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952611
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

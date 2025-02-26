@@ -1,0 +1,54 @@
+_id: req_e69028d97cea450296ccefd6fbf461b8
+type: Request
+parentId: fld_584ca854673b476a91d0ae6784270808
+modified: 1740515954014
+created: 1740515954014
+url: https://{{host}}/v2/customers/{{customer_id}}/groups/{{group_id}}
+name: AddGroupToCustomer
+description: Updates the details of an existing customer.
+method: PUT
+body:
+  mimeType: text/plain
+  text: |-
+    {
+      "idempotency_key": "UUID",
+      "given_name": "Amelia",
+      "family_name": "Earhart",
+      "company_name": "Square",
+      "nickname": "Yeo", 
+      "email_address": "Amelia.Earhart@example.com",
+      "address": {
+        "address_line_1": "500 Electric Ave",
+        "address_line_2": "Suite 600",
+        "locality": "New York",
+        "administrative_district_level_1": "NY",
+        "postal_code": "10003",
+        "country": "US"
+      },
+      "phone_number": "1-212-555-4240",
+      "reference_id": "YOUR_REFERENCE_ID",
+      "note": "a customer",
+      "birthday": "2008-03-05T00:00:00-00:00"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952453
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

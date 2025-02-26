@@ -1,0 +1,36 @@
+_id: req_5c2e0c745af54572a7f073aff4c1a7f3
+type: Request
+parentId: fld_fee4075afcc041f18337bcf66f5cb84e
+modified: 1740515953900
+created: 1740515953900
+url: https://{{host}}/oauth2/token
+name: OAuthObtain (refresh_token)
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |
+    {
+        "client_id": "{{client_id}}",
+        "client_secret": "{{client_secret}}",
+        "grant_type": "refresh_token",
+        "refresh_token": "{{refresh_token}}"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Client  {{oauth_secret}}
+  - name: Content-Type
+    value: application/json
+authentication: {}
+preRequestScript: ""
+metaSortKey: -1740515952712
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

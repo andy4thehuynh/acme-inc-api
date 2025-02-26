@@ -1,0 +1,14 @@
+_id: fld_e7034f5a62e64bb2992c5ca2e2085cc6
+type: RequestGroup
+parentId: fld_7e4ca85503504e62a8536eac7c5e3941
+modified: 1740515953995
+created: 1740515953995
+name: Catalog
+description: https://docs.connect.squareup.com/api/connect/v2#navsection-catalog
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952537
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

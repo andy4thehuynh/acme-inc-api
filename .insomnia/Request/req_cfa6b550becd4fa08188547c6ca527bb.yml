@@ -1,0 +1,41 @@
+_id: req_cfa6b550becd4fa08188547c6ca527bb
+type: Request
+parentId: fld_da6207513c5d4a48a681a9b7dda8d5b4
+modified: 1740515953964
+created: 1740515953964
+url: https://{{host}}/v2/terminals/actions
+name: CreateTerminalAction-Check for device information
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "action": {
+          "device_id": "{{device_id}}",
+          "type": "PING"
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952653
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

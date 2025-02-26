@@ -1,0 +1,50 @@
+_id: req_4d0e364388e14f5db94b35144760e870
+type: Request
+parentId: fld_e7c32aa83af14a4f973801a906653ce6
+modified: 1740515954002
+created: 1740515954002
+url: https://{{host}}/v2/bookings/availability/search
+name: SearchAvailability
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "query": {
+          "filter": {
+            "start_at_range": {
+              "end_at": "2024-01-10T01:29:39.477Z",
+              "start_at": "2023-12-09T01:29:39.477Z"
+            },
+            "location_id": "{{_['location_id']}}",
+            "segment_filters": [
+              {
+                "service_variation_id": "TUBSJ7S3SYAXVNCA2LMLFVA4"
+              }
+            ]
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952507
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

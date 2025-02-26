@@ -1,0 +1,14 @@
+_id: fld_9dde730c683b454c8378c18e3d9980b3
+type: RequestGroup
+parentId: fld_eb23ab58cb3847f7b4ff5b1184f19a34
+modified: 1740515953934
+created: 1740515953934
+name: CreatePayment
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1740515952699
+preRequestScript: ""
+afterResponseScript: ""
+authentication: {}
+headers: null

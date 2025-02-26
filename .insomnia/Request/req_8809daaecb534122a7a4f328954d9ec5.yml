@@ -1,0 +1,71 @@
+_id: req_8809daaecb534122a7a4f328954d9ec5
+type: Request
+parentId: fld_28638c15f15e43a4ad66d4517b2afd97
+modified: 1740515953977
+created: 1740515953977
+url: https://{{host}}/v2/catalog/object
+name: CreateSubscriptionPlanVariation
+description: ""
+method: POST
+body:
+  mimeType: text/plain
+  text: |-
+    {
+        "idempotency_key": "{% faker 'guid' %}",
+        "object": {
+          "type": "SUBSCRIPTION_PLAN_VARIATION",
+          "id": "#1",
+          "subscription_plan_variation_data": {
+            "name": "Coffee of the Month Club",
+            "phases": [
+              {
+                "cadence": "MONTHLY",
+                "ordinal": 0,
+                "periods": 1,
+                "pricing": {
+                  "type": "STATIC",
+                  "price": {
+                    "amount": 100,
+                    "currency": "USD"
+                  }
+                }
+              },
+              {
+                "cadence": "MONTHLY",
+                "ordinal": 1,
+                "pricing": {
+                  "type": "RELATIVE",
+                  "discount_ids": [
+                    "4VHZQB576CGW7LK2AU3YMB5B"
+                  ]
+                }
+              }
+            ],
+            "subscription_plan_id": "DA442EYC7ITK75BAJS4TIW7J"
+          }
+        }
+      }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{access_token}}
+  - name: Content-Type
+    value: application/json
+  - name: Square-Version
+    value: 2025-01-04
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952600
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

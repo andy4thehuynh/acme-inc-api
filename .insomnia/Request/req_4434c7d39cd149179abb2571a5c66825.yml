@@ -1,0 +1,48 @@
+_id: req_4434c7d39cd149179abb2571a5c66825
+type: Request
+parentId: fld_5cee7fcf8ccc4494b515b064c23adb79
+modified: 1740515954015
+created: 1740515954015
+url: https://{{_['host']}}/v2/customers/custom-attribute-definitions/{{_['custom_attribute_key']}}
+name: UpdateCustomerCustomAttributeDefinition
+description: https://docs.connect.squareup.com/api/connect/v2#endpoint-createorder
+method: PUT
+body:
+  mimeType: text/plain
+  text: >-
+    {
+        "custom_attribute_definition": {
+            "key": "favorite-drink",
+            "name": "Favorite Drink",
+            "description": "Customers favorite drink.",
+            "version": 1,
+            "schema": {
+                "$ref": "https://developer-production-s.squarecdn.com/schemas/v1/common.json#squareup.common.String"
+            },
+            "created_at": "2023-05-24T16:30:48.639Z",
+            "visibility": "VISIBILITY_READ_ONLY"
+        },
+        "idempotency_key": "{% faker 'guid' %}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {{access_token}}
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{access_token}}"
+  prefix: ""
+preRequestScript: ""
+metaSortKey: -1740515952447
+isPrivate: false
+pathParameters: null
+afterResponseScript: ""
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
